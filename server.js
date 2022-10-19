@@ -1,8 +1,15 @@
 const express = require("express")
 const axios = require("axios")
+const cors = require("cors")
 
 const app = express()
 const port = 3000
+
+app.use(cors())
+
+app.get("/", (req, res) => {
+  return res.send("Gatekeeper Running!")
+})
 
 app.get("/authenticate/:code", async (req, res) => {
   try {
