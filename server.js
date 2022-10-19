@@ -38,6 +38,6 @@ app.get("/authenticate/:code", async (req, res) => {
   }
 })
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`Rabbit pull server app listening on port ${port}`)
 })
