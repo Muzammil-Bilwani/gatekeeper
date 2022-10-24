@@ -17,7 +17,7 @@ app.get("/authenticate/:code", async (req, res) => {
       "https://github.com/login/oauth/access_token",
       {
         client_id: "4f26ab3457765e21e424",
-        redirect_uri: "https://rabbitpull.com",
+        redirect_uri: "https://app.rabbitpull.com",
         client_secret: "3cd0af8bcb69e8da15d9a4d1b353534700d4131c",
         code: req.params.code
       },
